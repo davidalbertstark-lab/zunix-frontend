@@ -1,8 +1,11 @@
 **Zunix – Frontend Practice Project**
 
-**Overview**
+**Overview**:
+
 Zunix is a frontend practice project built to strengthen my core skills in HTML, CSS, and JavaScript.
+
 It focuses on layout structure, responsiveness, visual balance, and clean UI implementation.
+
 This project was created during my learning phase to move from theory into real, working interfaces.
 
 **Purpose**
