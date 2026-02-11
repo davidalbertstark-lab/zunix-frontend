@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+
+.community-hero {
+  background: #00b050;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.community-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.community-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-links a {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-links a:hover {
+  background: #008c3a;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.community-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.community-card:hover {
+  transform: translateY(-5px);
+}
+
+.community-card .icon {
+  font-size: 2.2rem;
+  color: #00b050;
+  margin-bottom: 15px;
+}
+
+.community-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.community-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.subcard-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.subcard-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin: 8px 0;
+}
+
+.subcard-list i {
+  color: #00b050;
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #00b050;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #008c3a;
+}

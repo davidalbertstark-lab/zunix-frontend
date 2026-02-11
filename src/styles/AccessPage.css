@@ -1,0 +1,205 @@
+/* Body Styling */
+/* General Page Styling */
+.access-body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0A1014;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Box */
+.access-container {
+  background: #1a1a1a;
+  padding: 30px 25px;
+  border-radius: 20px;
+  border: 1px solid #2f2f2f;
+  width: 320px;
+  box-shadow: 0 0 10px #4ade8030;
+}
+
+/* Toggle Form Visibility */
+.form-box {
+  display: none;
+}
+
+.form-box.active {
+  display: block;
+}
+
+/* Logo */
+.icon {
+  height: 60px;
+  width: 60px;
+  background: #2d2d2d;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  border: 2px solid var(--accent, #00b050);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+/* Headings */
+.access-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Input Fields */
+.access-container input[type="text"],
+.access-container input[type="email"],
+.access-container input[type="password"] {
+  width: 92%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #292929;
+  color: #fff;
+  transition: border 0.3s;
+}
+
+.access-container input:focus {
+  border-color: #4ade80;
+  outline: none;
+}
+
+/* Labels */
+.access-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* Buttons */
+.access-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.access-button:hover {
+  background-color: #119106;
+}
+
+/* Google Auth Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.google-btn:hover {
+  background: #cdeeca;
+  color: #000;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Divider */
+.demacate {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Footer Links */
+.login-footer,
+.signin-link {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.login-footer a,
+.signin-link a {
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover,
+.signin-link a:hover {
+  text-decoration: underline;
+  color: #0eb64c;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #4ade80;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #0eb64c;
+}
+
+/* Checkbox */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #888;
+}
+
+.messageDiv {
+  background: #ff4d4d20;
+  color: #ff4d4d;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ff4d4d40;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .access-container {
+    padding: 30px 20px;
+  }
+}

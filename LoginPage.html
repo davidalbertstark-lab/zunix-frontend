@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zunix Access</title>
+  <link rel="stylesheet" href="src/styles/AccessPage.css" />
+</head>
+<body class="access-body">
+
+  <main class="access-container" id="accessContainer">
+    
+    <!-- Sign Up Section -->
+    <section class="form-box active" id="signupBox" aria-labelledby="signup-heading">
+      <div class="icon">
+        <img src="src/img/android-chrome-512x512.png" alt="Zunix Logo" />
+      </div>
+      <h2 id="signup-heading">Create Your Account</h2>
+      <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+      <form id="signupForm" action="#" method="POST" onsubmit="return validateForm(event)">
+        <input type="text" name="fullName" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        <p id="error-msg" class="error-msg" style="display:none; color:red;"></p>
+        <button type="submit" class="access-button">Sign Up</button>
+      </form>
+      <div class="demacate">or</div>
+      <button class="google-btn" type="button" onclick="googleSignUp()">
+        <img src="src/img/google.png" alt="Google Icon" />
+        Sign Up with Google
+      </button>
+      <p class="login-footer">Already have an account? <a href="#" onclick="showLogin()">Sign In</a></p>
+    </section>
+
+    <!-- Login Section -->
+    <section class="form-box" id="loginBox" aria-labelledby="login-heading">
+      <div class="icon">
+        <img src="src/img/android-chrome-512x512.png" alt="Zunix Logo" />
+      </div>
+      <h2 id="login-heading">Welcome Back</h2>
+      <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+      <form class="login-form" action="#" method="POST" onsubmit="return handleLogin(event)">
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <input type="password" name="password" placeholder="Enter your password" required />
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+        <button type="submit" class="access-button">Log In</button>
+      </form>
+      <div class="forgot-password"><a href="#">Forgot password?</a></div>
+      <div class="demacate">or</div>
+      <button class="google-btn" type="button" onclick="googleSignIn()">
+        <img src="src/img/google.png" alt="Google Icon" />
+        Sign in with Google
+      </button>
+      <p class="signin-link">Don’t have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    function showMessage(message, divId) {
+      const div = document.getElementById(divId);
+      if (!div) return;
+      div.style.display = "block";
+      div.innerHTML = message;
+      div.style.opacity = 1;
+      setTimeout(() => {
+        div.style.opacity = 0;
+      }, 5000);
+    }
+
+    function isPasswordStrong(password) {
+      const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*()_+{}:;<>,.?/~`-])/;
+      return password.length >= 6 && passwordRegex.test(password);
+    }
+
+    function getInputValue(id) {
+      return document.getElementById(id)?.value.trim();
+    }
+
+    function showLogin() {
+      document.getElementById("signupBox").classList.remove("active");
+      document.getElementById("loginBox").classList.add("active");
+    }
+
+    function showSignup() {
+      document.getElementById("loginBox").classList.remove("active");
+      document.getElementById("signupBox").classList.add("active");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+
+  if (hash === '#loginBox') {
+    showLogin();
+  } else if (hash === '#signupBox') {
+    showSignup();
+  }
+});
+
+  </script>
+  <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

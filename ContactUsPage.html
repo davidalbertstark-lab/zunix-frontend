@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Zunix</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="src/styles/ContactUsPage.css">
+</head>
+<body>
+  <section class="contact-page">
+    <div class="contact-container">
+      <div class="contact-box">
+        <div class="contact-info">
+          <h1>Contact Us</h1>
+          <p>Let’s connect. We’d love to hear from you and see how we can help.</p>
+
+          <div class="info-block">
+            <i class="fas fa-phone"></i>
+            <span>+234 800 000 0000</span>
+          </div>
+
+          <div class="info-block">
+            <i class="fas fa-envelope"></i>
+            <span>support@zunix.com</span>
+          </div>
+
+          <div class="info-block">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lagos, Nigeria</span>
+          </div>
+
+          <div class="footer-social">
+            <a href="https://facebook.com" class="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" class="twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <select class="opt" required>
+            <option value="" disabled selected hidden>-- Select Subject --</option>
+            <option value="general">General Inquiry</option>
+            <option value="feedback">Feedback/Suggestion</option>
+            <option value="partnership">Partnership/Collaboration</option>
+            <option value="media">Media/Press Request</option>
+            <option value="event">Event/Promotion Support</option>
+            <option value="tech">Tech Support</option>
+            <option value="org">University/Club Onboarding</option>
+          </select>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-direct">
+          You can contact us directly at <a href="mailto:zunixteamx@dmail.com" class="direct-link">our email address</a>.
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

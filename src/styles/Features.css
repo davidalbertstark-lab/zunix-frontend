@@ -1,0 +1,495 @@
+/* ========== GLOBAL STYLES ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+    margin: 0 0 10px;
+color: #00b050;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
+}
+
+h2, h3 {
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+.highlight-green {
+  color: #00b050;
+}
+
+.header-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/premium-photo/black-students-collaborating-stem-project_868783-55507.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+  overflow: hidden;
+}
+
+
+.header-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(91, 104, 127, 0.5); /* 70% opacity of #00b050 */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #00b050;
+  color: #01360d;
+}
+
+.btn-primary:hover {
+  background-color: #036A32;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #00b050;
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #01360d;
+}
+
+/* ========== WHO USES ZUNIX SECTION ========== */
+.who-uses-section {
+  background: #ffffff;
+  padding: 80px 20px;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #01360d;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #00b050;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #01360d;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+  }
+
+  .card {
+    padding: 25px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+/* FEATURES Section */
+#features {
+  background-color: #f4f4f9;
+  padding: 4rem 1.25rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #01360d;
+}
+
+#features h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #01360d;
+  line-height: 1.3;
+}
+
+#features p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+#features > div {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+#features article {
+  display: flex;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+#features article i {
+  font-size: 2rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+#features article:nth-child(1) i { color: #00b050; }
+#features article:nth-child(2) i { color: #00f2fe; }
+#features article:nth-child(3) i { color: #00b050; }
+#features article:nth-child(4) i { color: #00f2fe; }
+#features article:nth-child(5) i { color: #00b050; }
+#features article:nth-child(6) i { color: #00f2fe; }
+#features article:nth-child(7) i { color: #00b050; }
+
+#features h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #01360d;
+}
+
+#features article p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.trust-section {
+  background-color: #f4f4f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trust-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trust-heading {
+  font-size: 2.2rem;
+  color: #01360d;
+  margin-bottom: 15px;
+}
+
+.trust-subtext {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.trust-icon {
+  font-size: 1.5rem;
+  color: #00b050;
+  flex-shrink: 0;
+}
+
+.trust-item span {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Earn Section */
+.earn-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.earn-section .header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.earn-section .header h2 {
+  font-size: 2rem;
+  color: #01360d;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.earn-section .header p {
+  color: #4b5563;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.rewards-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #f4f4f9;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header i {
+  color: #00b050;
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.card-header h3 {
+  color: #01360d;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #c3ffe2;
+  padding: 80px 20px;
+}
+
+.testimonials h2 {
+  color: #01360d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials p {
+  color: #4b5563;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.testimonial {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-weight: 600;
+  color: #01360d;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #f4f4f9;
+  padding: 80px 20px;
+}
+
+.faq-section h2 {
+  color: #01360d;
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.faq-card h3 {
+  color: #01360d;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.faq-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: #01360d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-right {
+      font-family: monospace;
+      color: #ddd;
+}

@@ -1,0 +1,255 @@
+/* Section Wrapper */
+.How-it-works {
+  background: #01360d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #d4e3ff;
+  line-height: 1.6;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px; /* Give room if sticky header overlaps */
+  padding-bottom: 80px;
+  overflow-x: hidden;
+  scroll-margin-top: 80px; /* Optional: smooth anchor jump */
+}
+
+/* Section Title (Sticky) */
+.how-it-works-title {
+  position: sticky;
+  top: 0;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #33fff3;
+  text-align: center;
+  background-color: #000;
+  padding: 15px 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+/* Flow Layout */
+.flow-wrapper {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  padding-left: 70px;
+}
+
+/* Step Card */
+.step-card {
+  background: #0a2e13;
+  border: 2px solid #00f2fe;
+  border-radius: 18px;
+  padding: 28px 30px 30px 40px;
+  box-shadow: 0 14px 40px rgba(0, 242, 254, 0.5);
+  transition: box-shadow 0.4s ease, background-color 0.3s ease;
+  cursor: default;
+  position: relative;
+  z-index: 10;
+}
+
+.step-card:hover {
+  box-shadow: 0 20px 70px rgba(0, 242, 254, 0.8), 0 0 25px #33fff3;
+  background-color: #002611;
+}
+
+/* Step Title */
+.step-title {
+  font-family: 'Consolas', monospace;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #33fff3;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.07em;
+}
+
+/* Horizontal Line Connector */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 38px;
+  left: -70px;
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg, #33fff3 0%, #00b050 100%);
+  border-radius: 6px;
+  box-shadow: 0 0 18px #00b050, 0 0 15px #33fff3;
+  z-index: 5;
+}
+
+/* Timeline Dot */
+.step-card::after {
+  content: '';
+  position: absolute;
+  top: 38px;
+  left: -83px;
+  width: 18px;
+  height: 18px;
+  background: #00f2fe;
+  border-radius: 50%;
+  box-shadow: 0 0 18px #00f2fe, 0 0 35px #33fff3;
+  z-index: 15;
+}
+
+/* Step Description */
+.step-description {
+  font-size: 1rem;
+  color: #ccf5dd;
+  font-style: italic;
+}
+
+/* Substeps Container */
+.substeps-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 50px;
+  min-width: 600px;
+}
+
+/* Substeps Connector */
+.substeps-container::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -70px;
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg, #33fff3 0%, #00b050 100%);
+  border-radius: 6px;
+  box-shadow: 0 0 18px #00b050, 0 0 15px #33fff3;
+  z-index: 5;
+}
+
+/* Substep Card */
+.substep-card {
+  background: #004a26;
+  border: 2px solid #00b050;
+  border-radius: 16px;
+  padding: 26px 30px;
+  box-shadow: 0 10px 30px rgba(0, 176, 80, 0.5);
+  color: #ccf5dd;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 10;
+  width: 600px;
+}
+
+.substep-card:hover {
+  background-color: #006633;
+  border-color: #33fff3;
+  box-shadow: 0 12px 45px rgba(51, 255, 243, 0.8);
+}
+
+/* Substep Title */
+.substep-card h3 {
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #00f2fe;
+  letter-spacing: 0.05em;
+}
+
+/* Substep Text */
+.substep-card p {
+  color: #99e7cc;
+  line-height: 1.5;
+}
+
+/* Substep List */
+.substep-card ul {
+  margin-left: 22px;
+  color: #a0f0d1;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.substep-card ul li {
+  margin-bottom: 7px;
+}
+
+/* Substep Dot */
+.substep-card::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: -62px;
+  width: 14px;
+  height: 14px;
+  background: #00b050;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00b050, 0 0 28px #33fff3;
+  z-index: 12;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .flow-wrapper {
+    width: 100%;
+    height: 700px;
+    padding-left: 40px;
+    gap: 40px;
+    overflow-y: auto;
+  }
+
+  .step-card,
+  .substep-card {
+    padding-left: 20px;
+    width: 350px;
+  }
+
+  .step-card::before,
+  .substeps-container::before {
+    left: -40px;
+    width: 40px;
+  }
+
+  .step-card::after {
+    left: -55px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .substep-card::before {
+    left: -40px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .substeps-container {
+    min-width: 350px;
+  }
+
+  .how-it-works-title {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+
+  .flow-wrapper::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .flow-wrapper::-webkit-scrollbar-track {
+    background: #004a26;
+    border-radius: 10px;
+  }
+
+  .flow-wrapper::-webkit-scrollbar-thumb {
+    background: #00f2fe;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,54 @@
+.inspired-by {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.inspired-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inspired-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.inspired-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.inspired-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.inspired-logos img {
+  width: 130px;
+  height: 120px;
+  object-fit: contain;
+  animation: zoomInOut 1.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Pause animation and scale more on hover */
+.inspired-logos img:hover {
+  transform: scale(1.2);
+  animation-play-state: paused;
+}
+
+/* Zoom In/Out Keyframes */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

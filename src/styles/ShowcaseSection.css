@@ -1,0 +1,264 @@
+.showcase-section{
+    background: linear-gradient(135deg, #01360d, #001e0d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+.metrics-showcase {
+  background: rgba(1, 54, 13, 0.75);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 95%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow:
+    0 0 10px 2px #33fff3,
+    inset 0 0 20px 2px #00b050;
+  text-align: center;
+  border: 1px solid transparent;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+/* Glowing diagonal animation */
+.metrics-showcase::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 176, 80, 0) 0%,
+    rgba(51, 255, 243, 0) 45%,
+    rgba(51, 255, 243, 0.8) 50%,
+    rgba(51, 255, 243, 0) 55%,
+    rgba(0, 176, 80, 0) 100%
+  );
+  background-size: 50% 50%;
+  animation: shine 2.5s linear infinite;
+  filter: blur(25px);
+  opacity: 0.7;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.metrics-showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00b050;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  mix-blend-mode: overlay;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.metrics-showcase:hover::after {
+  opacity: 0.6;
+}
+
+/* For mobile devices */
+@media (hover: none) {
+  .metrics-showcase::after {
+    animation: pulseBackground 8s infinite alternate;
+  }
+
+  @keyframes pulseBackground {
+    0%, 40% {
+      opacity: 0;
+    }
+    60%, 100% {
+      opacity: 0.6;
+    }
+  }
+}
+
+/* Header styles */
+.metrics-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f4f4f9;
+  text-shadow: 0 0 3px #33fff3, 0 0 6px #00b050;
+  z-index: 1;
+  position: relative;
+}
+
+.metrics-header p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c3ffe2;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  text-shadow: 0 0 3px #00b050;
+  z-index: 1;
+  position: relative;
+}
+
+/* Metrics grid layout */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Metric cards */
+.metric-card {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 1.2rem 0.8rem;
+  box-shadow: 0 0 8px 1px #33fff3;
+  backdrop-filter: saturate(180%) blur(5px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(51, 255, 243, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.metric-card:hover::before {
+  left: 100%;
+}
+
+.metric-card h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 900;
+  color: #33fff3;
+  text-shadow: 0 0 5px #33fff3, 0 0 10px #00b050;
+}
+
+.metric-card p {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ccf5dd;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px #00b050;
+}
+
+/* Footer */
+.metrics-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ccf5dd;
+  font-style: italic;
+  text-shadow: 0 0 5px #00b050, 0 0 8px #33fff3;
+  line-height: 1.4;
+  z-index: 1;
+  position: relative;
+}
+
+/* Responsive design */
+@media (min-width: 480px) {
+  .metrics-showcase {
+    padding: 2.5rem 2rem;
+    border-radius: 25px;
+  }
+
+  .metrics-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .metrics-header p {
+    font-size: 1.1rem;
+  }
+
+  .metric-card h2 {
+    font-size: 2.2rem;
+  }
+
+  .metric-card p {
+    font-size: 0.9rem;
+  }
+
+  .metrics-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .metrics-showcase {
+    padding: 3.5rem 3rem;
+    border-radius: 30px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .metrics-showcase::before {
+    filter: blur(30px);
+  }
+
+  .metrics-header h1 {
+    font-size: 3rem;
+  }
+
+  .metrics-header p {
+    font-size: 1.4rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2.8rem;
+  }
+
+  .metric-card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .metric-card h2 {
+    font-size: 3rem;
+  }
+
+  .metric-card p {
+    font-size: 1.25rem;
+  }
+
+  .metrics-footer {
+    font-size: 1.3rem;
+  }
+}

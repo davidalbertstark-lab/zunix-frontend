@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.programs-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 38px;
+  background-color: #EBEBEB;
+}
+
+.program-cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.program-cta-buttons .btn-secondary {
+  background-color: transparent;
+  border: 2px solid #00b050;
+  color: #00b050;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.program-cta-buttons .btn-secondary:hover {
+  background-color: #00b050;
+  color: #fff;
+}
+
+.image-container {
+  margin-bottom: 2rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: #00b050; /* Brand accent */
+  margin: 0 auto 1.5rem auto;
+  border-radius: 8px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto 1rem auto;
+  max-width: 600px;
+}
+
+.apply-text {
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00b050; /* Brand primary */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00923f; /* Darker shade for hover */
+}
+
+.zunix-program {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.program-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.program-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #202124;
+}
+
+.program-tagline {
+  font-size: 1.2rem;
+  color: #5f6368;
+  margin-top: 10px;
+}
+
+.program-description {
+  font-size: 1.05rem;
+  color: #3c4043;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.program-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00b050; /* Green branding for headings */
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #5f6368;
+}
+
+.cta-button-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta-button-wrapper .btn-primary {
+  padding: 14px 28px;
+  background-color: #00b050;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button-wrapper .btn-primary:hover {
+  background-color: #00923f;
+}
+
+.footer {
+  background-color: #01360d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-right {
+      font-family: monospace;
+      color: #ddd;
+}

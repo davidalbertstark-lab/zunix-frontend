@@ -1,0 +1,154 @@
+ footer {
+     background: linear-gradient(to right, #000000, #01360d);
+
+      width: 100%;
+      margin-top: auto;
+      padding: 60px 0 30px;
+      color: #fff;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+    .footer-bottom {
+  display: flex;
+  flex-direction: column; /* <-- Add this */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+    .lang-menu {
+      position: relative;
+    }
+
+    .lang-menu details {
+      position: relative;
+      display: inline-block;
+    }
+
+    .lang-menu summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 6px 10px;
+      border: 1px solid #2d0b00;
+      border-radius: 5px;
+      background-color: #2d0b00;
+      color: white;
+    }
+
+    .lang-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .lang-menu ul {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      width: 160px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 5px 0;
+      margin: 5px 0;
+      z-index: 10;
+    }
+
+    .lang-menu ul li {
+      list-style: none;
+    }
+
+    .lang-menu ul li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      padding: 8px 12px;
+      color: #333;
+    }
+
+    .lang-menu ul li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .flag {
+  width: 24px;
+  height: 18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+
+
+    .en::before { background-image: url('https://flagcdn.com/w40/gb.png'); }
+    .de::before { background-image: url('https://flagcdn.com/w40/de.png'); }
+    .fr::before { background-image: url('https://flagcdn.com/w40/fr.png'); }
+    .ar::before { background-image: url('https://flagcdn.com/w40/ae.png'); }
+
+    .logo{
+        width: 24px;
+        height: 24px;
+        margin-bottom: 5px;
+    }
+
+    .copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .copyimage {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .divi {
+      margin: 0 10px;
+      color: #ccc;
+    }
+
+    .footer-right {
+      font-family: monospace;
+      color: #ddd;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }

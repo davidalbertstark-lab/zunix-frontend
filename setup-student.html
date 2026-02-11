@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Setup</title>
+  <link rel="icon" href="src/img/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="src/img/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="src/img/apple-touch-icon.png" sizes="180x180" />
+  <link rel="stylesheet" href="src/styles/setup-student.css">
+  <link rel="stylesheet" href="src/styles/step6.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="screen-header">Student Account Setup</h1>
+    <form id="setupForm">
+
+      <!-- Step 1 -->
+      <div class="step active">
+        <h2>Step&nbsp;1: Basic Information</h2>
+        <label for="username">Username</label>
+<input
+  type="text"
+  id="username"
+  name="username"
+  required
+  pattern="[a-z0-9_]{3,20}"
+  title="3–20 characters. Lowercase letters, numbers, and underscores only."
+  placeholder="Enter username"
+/>
+        <div class="error" id="usernameError"></div>
+        <button type="button" id="step1NextBtn">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <h2>Step&nbsp;2: Gender Selection</h2>
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error" id="genderError"></div>
+        <button type="button" id="step2NextBtn">Next</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <h2>Step&nbsp;3: Date of Birth</h2>
+        <label for="dob">Date&nbsp;of&nbsp;Birth</label>
+        <input type="date" id="dob" required />
+        <div class="error" id="dobError"></div>
+        <div id="dobMessage" style="margin-top:-15px;margin-bottom:15px;font-size:12px;"></div>
+        <button type="button" id="step3NextBtn">Next</button>
+      </div>
+
+      <!-- Step 4: Campus Location -->
+      <div class="step" id="step4">
+        <h2>Step&nbsp;4: Campus Location</h2>
+
+        <label for="campusRegion">Campus Region <span class="required">*</span></label>
+        <select id="campusRegion" name="campusRegion" required>
+          <option value="">Select a region</option>
+        </select>
+        <div id="campusRegionError" class="error"></div>
+
+        <label for="state">State <span class="required">*</span></label>
+        <select id="state" name="state" required>
+          <option value="">Select region first</option>
+        </select>
+        <div id="stateError" class="error"></div>
+
+        <label for="city">City/Town <span class="required">*</span></label>
+        <select id="city" name="city" required>
+          <option value="">Select state first</option>
+        </select>
+        <div id="cityError" class="error"></div>
+
+        <small class="info-text">
+          Pick where your school is actually based — this location determines what schools you’ll see in the next step.
+        </small>
+
+        <button id="step4BackBtn" type="button">Back</button>
+        <button id="step4NextBtn" type="button">Next</button>
+      </div>
+
+      <!-- Step 5: Educational Info -->
+      <div class="step">
+        <h2>Step&nbsp;5: Educational Information</h2>
+
+        <label for="institution">Institution <span class="required">*</span></label>
+        <input
+          list="institutionList"
+          id="institution"
+          name="institution"
+          placeholder="Start typing your institution name..."
+          autocomplete="off"
+          required
+        />
+        <datalist id="institutionList"></datalist>
+        <div class="error" id="institutionError"></div>
+
+        <label for="course">Course&nbsp;of&nbsp;Study <span class="required">*</span></label>
+        <input type="text" id="course" required/>
+        <small class="info-text">Please write the full course name. Avoid abbreviations (e.g., use Computer Science instead of CS).</small>
+        <div class="error" id="courseError"></div>
+
+        <label for="faculty">Faculty <span class="required">*</span></label>
+        <input type="text" id="faculty" required/>
+        <small class="info-text">Use the complete name of your faculty. No short forms.</small>
+        <div class="error" id="facultyError"></div>
+
+        <label for="level">Level <span class="required">*</span></label>
+        <select id="level" required></select>
+        <div class="error" id="levelError"></div>
+
+        <label for="gradYear">Graduation&nbsp;Year <span class="required">*</span></label>
+        <select id="gradYear" required>
+          <option value="">Select graduation year</option>
+        </select>
+        <div class="error" id="gradYearError"></div>
+
+        <button type="button" id="step5BackBtn">Back</button>
+        <button type="button" id="finishBtn">Finish</button>
+      </div>
+
+      <!-- Step 6: Confirmation -->
+      <div class="step neon-card">
+    <div class="checkmark">⚠️</div>
+    <h1>REVIEW <span>YOUR DETAILS</span></h1>
+    <p class="sub">Please confirm your info before clicking Submit.</p>
+
+    <div class="avatar">
+      <img src="boyss.png" alt="Avatar">
+    </div>
+
+    <div class="info">
+      <p class="info-row"><span class="label">Full Name:</span> <span class="value" id="summaryName"></span></p>
+      <p class="info-row"><span class="label">Username:</span> <span class="value" id="summaryUsername"></span></p>
+      <p class="info-row"><span class="label">Email:</span> <span class="value" id="summaryEmail"></span></p>
+      <p class="info-row"><span class="label">Institution:</span> <span class="value" id="summaryInstitution"></span></p>
+      <p class="info-row"><span class="label">Level:</span> <span class="value" id="summaryLevel">200 Level</span></p>
+    </div>
+
+<div class="button-row">
+  <button type="button" class="btn btn-back" id="step6BackBtn"> Back</button>
+  <button type="button" class="btn btn-submit" id="submitBtn">Submit </button>
+</div>
+  </div>
+
+      <!-- Step 7: Final Message -->
+      <div class="step" id="step7">
+        <h2>Setup Complete!</h2>
+        <p>Welcome to the Zunix ecosystem 🎉</p>
+        <button id="completeSetupBtn">Finish Setup</button>
+      </div>
+
+    </form>
+
+    <div id="summary-box" style="display:none;"></div>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "North Central": {
+    "Benue": ["Makurdi"],
+    "Kogi": ["Lokoja"],
+    "Kwara": ["Ilorin"],
+    "Nasarawa": ["Lafia"],
+    "Niger": ["Minna"],
+    "Plateau": ["Jos"],
+    "FCT": ["Abuja"]
+  },
+  "North East": {
+    "Adamawa": ["Yola", "Mubi"],
+    "Bauchi": ["Bauchi"],
+    "Borno": ["Maiduguri"],
+    "Gombe": ["Gombe"],
+    "Taraba": ["Jalingo"],
+    "Yobe": ["Damaturu"]
+  },
+  "North West": {
+    "Kaduna": ["Zaria", "Kaduna"],
+    "Kano": ["Kano"],
+    "Katsina": ["Katsina"],
+    "Sokoto": ["Sokoto"],
+    "Jigawa": ["Dutse"]
+  },
+  "South West": {
+    "Ekiti": ["Ado Ekiti"],
+    "Lagos": ["Lagos", "Ikeja", "Badagry", "Epe", "Ojo", "Yaba"],
+    "Ogun": ["Abeokuta", "Ota", "Ijebu-Ode"],
+    "Ondo": ["Akure", "Owo"],
+    "Osun": ["Ile-Ife", "Oshogbo", "Iwo"],
+    "Oyo": ["Ibadan", "Oyo"]
+  },
+  "South East": {
+    "Abia": ["Umuahia", "Arochukwu"],
+    "Anambra": ["Awka", "Nnewi", "Aguata"],
+    "Ebonyi": ["Abakaliki"],
+    "Enugu": ["Enugu", "Nsukka"],
+    "Imo": ["Owerri", "Okigwe"]
+  },
+  "South South": {
+    "Akwa Ibom": ["Uyo", "Ikot Ekpene"],
+    "Bayelsa": ["Yenagoa"],
+    "Cross River": ["Calabar"],
+    "Delta": ["Asaba", "Abraka", "Effurun"],
+    "Edo": ["Benin City", "Auchi"],
+    "Rivers": ["Port Harcourt", "Okrika"]
+  }
+}
